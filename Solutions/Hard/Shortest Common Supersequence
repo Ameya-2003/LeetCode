@@ -1,0 +1,110 @@
+import java.util.*;
+
+class Solution {
+    // O(m*n), O(m*n). find the longest common subsequence and fill the extra chars
+    public String shortestCommonSupersequence(String str1, String str2) {
+        int m = str1.length();
+        int n = str2.length();
+        int[][] dp = new int[m + 1][n + 1];
+
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                } else {
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                }
+            }
+        }
+
+        Deque<Character> res = new LinkedList<>();
+        int i = m, j = n;
+        while (i > 0 && j > 0) {
+            if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
+                i--;
+                j--;
+                res.addFirst(str1.charAt(i));
+            } else if (dp[i - 1][j] == dp[i][j]) {
+                i--;
+                res.addFirst(str1.charAt(i));
+            } else if (dp[i][j - 1] == dp[i][j]) {
+                j--;
+                res.addFirst(str2.charAt(j));
+            }
+        }
+
+        while (i > 0) {
+            i--;
+            res.addFirst(str1.charAt(i));
+        }
+        while (j > 0) {
+            j--;
+            res.addFirst(str2.charAt(j));
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (char c : res) {
+            sb.append(c);
+        }
+
+        return sb.toString();
+    }
+}
+
+class Main {
+    public static boolean isShortestCommonSupersequence(String scs, String str1, String str2) {
+        int m = str1.length();
+        int n = str2.length();
+        int i = 0, j = 0;
+        for (char c : scs.toCharArray()) {
+            if (i < m && j < n && c == str1.charAt(i) && c == str2.charAt(j)) {
+                i++;
+                j++;
+            } else if (i < m && c == str1.charAt(i)) {
+                i++;
+            } else if (j < n && c == str2.charAt(j)) {
+                j++;
+            } else {
+                return false;
+            }
+        }
+        return i == m && j == n;
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String[] methods = new String[]{"shortestCommonSupersequence"};
+
+        for (String method : methods) {
+            System.out.println("Testing " + method + ":");
+            try {
+                java.lang.reflect.Method func = Solution.class.getMethod(method, String.class, String.class);
+                String[][] cases = new String[][]{
+                        {"a", "b"},
+                        {"abac", "cab"},
+                        {"aaaaaaaa", "aaaaaaaa"},
+                        {"bbbaaaba", "bbababbb"},
+                        {
+                                "atdznrqfwlfbcqkezrltzyeqvqemikzgghxkzenhtapwrmrovwtpzzsyiwongllq",
+                                "xjtuwbmvsdeogmnzorndhmjoqnqjnhmfueifqwleggctttilmfokpgotfykyzdhf"
+                        }
+                };
+
+                for (String[] testCase : cases) {
+                    String str1 = testCase[0];
+                    String str2 = testCase[1];
+                    Object result = func.invoke(sol, str1, str2);
+                    String scs = (String) result;
+                    if (!isShortestCommonSupersequence(scs, str1, str2)) {
+                        System.out.println("  Failed => args: [" + str1 + ", " + str2 + "]; got: '" + scs + "' not the shortest common supersequence");
+                        break;
+                    }
+                }
+                System.out.println("  All Passed");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println();
+        }
+    }
+}
