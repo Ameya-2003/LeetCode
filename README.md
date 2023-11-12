@@ -18,7 +18,11 @@ Please note that these solutions are provided as-is and may not be the most opti
 
 **Contact Information**
 
-If you have any questions or suggestions regarding the solutions in this repository, you can reach out to me at ameyaleetcode@gmail.com.
+If you have any questions or suggestions regarding the solutions in this repository, you can reach out to me at (ameyaleetcode@gmail.com).
 
-Happy coding!
+**Repository Link**
+
+Here you can find the Java solutions to various LeetCode Problems at (https://github.com/Ameya-2003/LeetCode/tree/main/Solutions)
+
+**Happy coding!**
 
