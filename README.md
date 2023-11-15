@@ -18,7 +18,7 @@ Please note that these solutions are provided as-is and may not be the most opti
 
 ***Contact Information***
 
-If you have any questions or suggestions regarding the solutions in this repository, you can reach out to me via [Email](ameyaleetcode@gmail.com).
+If you have any questions or suggestions regarding the solutions in this repository, you can reach out to me via (ameyaleetcode@gmail.com).
 
 ***Happy coding!***
 
