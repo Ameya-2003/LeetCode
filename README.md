@@ -4,7 +4,7 @@
 
 This repository contains Java solutions to coding problems on LeetCode, contributed by me. LeetCode is a popular online platform that provides a vast collection of coding interview questions. The solutions provided here aim to demonstrate Ameya's coding proficiency and problem-solving skills in Java.
 
-[![Leetcode](https://img.shields.io/badge/-LeetCode-FFA116?)](https://ameya-2003.github.io/LeetCode/)
+[![Leetcode](https://img.shields.io/badge/-LeetCode-FFA116?)](https://leetcode.com/AmeyaMuktewar/)
 
 📝***Solutions***
 
