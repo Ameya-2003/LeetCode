@@ -18,7 +18,7 @@ Contributions to this repository are not open to the public as it showcases Amey
 
 Please note that these solutions are provided as-is and may not be the most optimal or efficient solution for every problem. They are intended to showcase coding techniques and strategies. It's always recommended to try solving the problems on your own before referring to any external solution.
 
-🖋***Contact Information***
+✍***Contact Information***
 
 If you have any questions or suggestions regarding the solutions in this repository, you can reach out to me via (ameyaleetcode@gmail.com).
 
