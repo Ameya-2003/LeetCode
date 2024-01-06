@@ -4,6 +4,8 @@
 
 This repository contains Java solutions to coding problems on LeetCode, contributed by me. LeetCode is a popular online platform that provides a vast collection of coding interview questions. The solutions provided here aim to demonstrate Ameya's coding proficiency and problem-solving skills in Java.
 
+[![Leetcode](https://img.shields.io/badge/-LeetCode-FFA116?)](https://ameya-2003.github.io/LeetCode/)
+
 ***Solutions***
 
 The solutions are organized in a structured manner, with each problem residing in its own folder. The folder name corresponds to the problem's ID on LeetCode. Inside each folder, you will find the Java file(s) containing the solution(s), along with a README.md file that explains the problem statement and the approach used to solve it.
