@@ -12,7 +12,7 @@ The solutions are organized in a structured manner, with each problem residing i
 
 🤝 ***Contributing***
 
-Contributions to this repository are not open to the public as it showcases Ameya Muktewar's personal solutions. However, you are welcome to explore the code and learn from it. Feel free to fork the repository and adapt the solutions to suit your needs.
+Contributions to this repository are not open to the public as it showcases my personal solutions. However, you are welcome to explore the code and learn from it. Feel free to fork the repository and adapt the solutions to suit your needs.
 
 📌 ***Disclaimer***
 
